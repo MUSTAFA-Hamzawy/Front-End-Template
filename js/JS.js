@@ -1,21 +1,38 @@
+let mainColor = localStorage.getItem("mainColor");
+if (mainColor !== null)
+  document.documentElement.style.setProperty("--primary-color", mainColor);
 /**
- * Start Randomizing the background of the landing page
+ * Start Setting Section
  */
+// show options
+showOptions();
+// switch colors
+const colorsListItemsArr = document.querySelectorAll(".colors li");
 
-let landingPage = document.querySelector(".landing-page");
+colorsListItemsArr.forEach((li) => {
+  li.addEventListener("click", (el) => {
+    colorsListItemsArr.forEach((li) => {
+      li.classList.remove("active");
+    });
 
-// get the arr of images
-let images = ["bg1.jpg", "bg2.jpg", "bg4.jpg", "bg5.jpg"];
+    li.classList.add("active");
 
-// get random element
-let randomImage = images[Math.floor(Math.random() * images.length)];
+    document.documentElement.style.setProperty(
+      "--primary-color",
+      el.target.dataset.color
+    );
+    localStorage.setItem("mainColor", el.target.dataset.color);
+  });
+});
 
-// change the background every num of seconds
-let interval = 3000;
-
-setInterval(() => {
-  let randomImage = images[Math.floor(Math.random() * images.length)];
-  landingPage.style.backgroundImage = `url(images/${randomImage})`;
-}, interval);
-
-// * End Randomizing the background of the landing page
+// check whether the user wants a random bg or not
+let id;
+let interval = 5000;
+document.querySelector(".random-bg .accept").onclick = function () {
+  id = randomizeBackgrounds(interval);
+};
+document.querySelector(".random-bg .decline").onclick = function () {
+  clearInterval(id);
+};
+id = randomizeBackgrounds(interval);
+//  End Setting Section

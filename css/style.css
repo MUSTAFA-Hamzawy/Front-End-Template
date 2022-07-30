@@ -1,7 +1,11 @@
 /* Variables  */
 :root {
   --header-color: white;
-  --primary-color: green;
+  --primary-color: lightgreen;
+  --first-color: #30009c;
+  --second-color: #00c4b4;
+  --third-color: #b00020;
+  --fourth-color: #ffde03;
 }
 
 body {
@@ -64,3 +68,79 @@ body {
   color: var(--primary-color);
 }
 /* End Landing Page  */
+
+/* Start Settings  */
+.settings {
+  min-height: 100vh;
+  width: 200px;
+  z-index: 10;
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.settings.opened {
+  left: 0;
+}
+.settings img {
+  font-size: 50px;
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+  color: white;
+  width: 30px;
+  background: transparent;
+  right: -30px;
+  cursor: pointer;
+}
+.settings .options .colors {
+  text-align: center;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.settings .options .colors li {
+  list-style: none;
+  width: 28px;
+  height: 24px;
+  border-radius: 51%;
+  display: inline-block;
+  cursor: pointer;
+}
+.settings .options .colors li.active {
+  border: 2px solid black;
+}
+.settings .options .colors :nth-child(2) {
+  background-color: var(--first-color);
+}
+.settings .options .colors :nth-child(3) {
+  background-color: var(--second-color);
+}
+.settings .options .colors :nth-child(4) {
+  background-color: var(--third-color);
+}
+.settings .options .colors :nth-child(5) {
+  background-color: var(--fourth-color);
+}
+.random-bg {
+  text-align: center;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.random-bg div {
+  background-color: #b00020;
+  font-weight: 200;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+/* End Settings  */
