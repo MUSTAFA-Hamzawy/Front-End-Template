@@ -1,0 +1,66 @@
+/* Variables  */
+:root {
+  --header-color: white;
+  --primary-color: green;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Start Landing Page  */
+.landing-page {
+  min-height: 100vh;
+  background-image: url("../images/bg4.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.landing-page .header {
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 10px;
+}
+
+.landing-page .header .logo {
+  padding-top: 13px;
+  font-weight: bold;
+  color: var(--header-color);
+}
+.landing-page .header .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.landing-page .header ul {
+  list-style: none;
+  text-align: right;
+}
+.landing-page .header ul li {
+  display: inline;
+  padding: 5px;
+  margin: 5px;
+}
+.landing-page .header ul a {
+  color: var(--header-color);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.landing-page .header ul a:hover,
+.landing-page .header ul a.active {
+  color: var(--primary-color);
+}
+
+.landing-page .welcome-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--header-color);
+}
+.landing-page .welcome-text span {
+  color: var(--primary-color);
+}
+/* End Landing Page  */
