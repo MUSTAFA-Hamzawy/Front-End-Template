@@ -36,3 +36,17 @@ document.querySelector(".random-bg .decline").onclick = function () {
 };
 id = randomizeBackgrounds(interval);
 //  End Setting Section
+
+// progress section
+
+let skills = document.querySelector(".skills");
+
+window.onscroll = function () {
+  let scrollTop = this.pageYOffset;
+  let allSkills = document.querySelectorAll(".skills .skill-container span");
+  if (scrollTop > 250) {
+    allSkills.forEach((skill) => {
+      skill.style.width = skill.dataset.progress;
+    });
+  }
+};
