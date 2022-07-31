@@ -50,3 +50,48 @@ window.onscroll = function () {
     });
   }
 };
+
+// Start Gallery
+
+let imgs = document.querySelectorAll(".gallery img");
+
+imgs.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    // create a div as an overlay window
+    let overlayDiv = document.createElement("div");
+    overlayDiv.className = "overlay-popup";
+    document.body.appendChild(overlayDiv);
+
+    // create a div as a box for the image
+    let popupBox = document.createElement("div");
+    popupBox.className = "popup-box";
+    document.body.appendChild(popupBox);
+
+    // Create the heading
+    let heading = document.createElement("h2");
+    heading.appendChild(document.createTextNode(img.alt));
+    popupBox.appendChild(heading);
+
+    // Create the close button
+    let closeSpan = document.createElement("span");
+    closeSpan.appendChild(document.createTextNode("X"));
+    closeSpan.className = "close-button";
+    popupBox.appendChild(closeSpan);
+
+    // create the img
+    let targetImage = document.createElement("img");
+    targetImage.src = e.target.src;
+    targetImage.className = "larger-img";
+    popupBox.appendChild(targetImage);
+  });
+});
+
+// add event to the close button
+document.addEventListener("click", (e) => {
+  if (e.target.className == "close-button") {
+    e.target.parentNode.remove();
+    document.querySelector(".overlay-popup").remove();
+  }
+});
+
+// End Gallery
