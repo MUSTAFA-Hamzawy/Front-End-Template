@@ -314,3 +314,64 @@ body {
   border-radius: 50%;
 }
 /* End Gallery  */
+
+/* Start timeline */
+.timeline {
+  background-color: #eee;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.timeline h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+.timeline .content {
+  overflow: hidden;
+  position: relative;
+}
+.timeline .content::before {
+  content: "";
+  width: 2px;
+  background-color: var(--primary-color);
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.timeline .content h3 {
+  color: var(--primary-color);
+}
+.timeline .content .year {
+  background-color: var(--primary-color);
+  text-align: center;
+  width: 60px;
+  color: white;
+  font-weight: bold;
+  margin: auto;
+  padding: 5px;
+  border-radius: 4px;
+  z-index: 2;
+}
+.timeline .content .right {
+  float: right;
+}
+.timeline .content .left {
+  float: left;
+}
+.timeline .content .right,
+.timeline .content .left {
+  width: 50%;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.timeline .content p {
+  color: #595957;
+  line-height: 30px;
+}
+.clearfix {
+  clear: both;
+}
+/* End timeline */
