@@ -402,3 +402,40 @@ body {
   line-height: 1.8;
 }
 /* End Features */
+
+/* Start Testimonials */
+.testimonials {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--primary-color);
+}
+
+.testimonials h1 {
+  color: white;
+}
+
+.testimonials .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testimonials .testimonial {
+  background-color: white;
+  width: calc(97% / 3);
+  padding: 10px;
+}
+.testimonials .testimonial p {
+  color: #595957;
+}
+/* End Testimonials */
+
+/* // Footer */
+
+footer {
+  background-color: #333333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  text-align: center;
+}
