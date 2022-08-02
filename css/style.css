@@ -430,6 +430,56 @@ body {
 }
 /* End Testimonials */
 
+/* Start Contact */
+.contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.contact h1 {
+  color: var(--primary-color);
+  text-align: center;
+}
+.contact .container form {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+}
+.contact form .info,
+.contact form .msg {
+  width: 48%;
+  margin: 1%;
+}
+.contact form input,
+.contact form textarea {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid black;
+  height: 40px;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: 1px solid var(--primary-color);
+}
+.contact form textarea:focus::-webkit-input-placeholder,
+.contact form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: 0.3s;
+}
+.contact form textarea {
+  height: 141px;
+}
+.contact form input[type="submit"] {
+  color: white;
+  font-weight: 200;
+  border-color: transparent;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+/* End Contact */
+
 /* // Footer */
 
 footer {
