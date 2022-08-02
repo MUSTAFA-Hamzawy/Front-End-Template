@@ -5,7 +5,7 @@
   --first-color: #30009c;
   --second-color: #00c4b4;
   --third-color: #b00020;
-  --fourth-color: #ffde03;
+  --fourth-color: #ff9000;
 }
 
 /* Start Global Rules */
@@ -14,8 +14,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .container {
   margin-left: auto;
@@ -44,10 +45,6 @@ body {
 }
 /* End Global Rules */
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
 /* Start Landing Page  */
 .landing-page {
   min-height: 100vh;
@@ -63,6 +60,59 @@ body {
   padding-top: 10px;
 }
 
+.landing-page .header .menu {
+  margin: 5px;
+  text-align: right;
+  display: none;
+}
+.landing-page .header .menu img {
+  max-width: 60px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .landing-page .header .menu {
+    display: block;
+    z-index: 11;
+  }
+  .landing-page .header ul {
+    display: none;
+    padding: 0;
+  }
+  .landing-page .header .open {
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 8%;
+    right: 21%;
+    z-index: 10;
+    width: 300px;
+  }
+  .landing-page .header .open::before {
+    content: "";
+    border: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -9%;
+    right: 2%;
+    border-width: 19px;
+  }
+  .landing-page .header .open li {
+    padding: 20px;
+  }
+  .landing-page .header .open {
+    padding: 0;
+  }
+  .landing-page .header .open li a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .landing-page .header .open li a:hover {
+    color: black;
+  }
+}
 .landing-page .header .logo {
   padding-top: 13px;
   font-weight: bold;
@@ -462,6 +512,7 @@ body {
 .contact form input:focus,
 .contact form textarea:focus {
   outline: 1px solid var(--primary-color);
+  border: none;
 }
 .contact form textarea:focus::-webkit-input-placeholder,
 .contact form input:focus::-webkit-input-placeholder {

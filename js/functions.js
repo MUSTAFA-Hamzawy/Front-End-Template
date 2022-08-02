@@ -3,7 +3,7 @@ function randomizeBackgrounds(interval) {
   let landingPage = document.querySelector(".landing-page");
 
   // get the arr of images
-  let images = ["bg1.jpg", "bg2.jpg", "bg4.jpg", "bg5.jpg"];
+  let images = ["bg1.jpg", "bg2.jpg", "bg4.jpg"];
 
   // get random element
   let randomImage = images[Math.floor(Math.random() * images.length)];
@@ -21,6 +21,7 @@ function randomizeBackgrounds(interval) {
 function showOptions() {
   document.querySelector(".settings img").onclick = function () {
     document.querySelector(".settings").classList.toggle("opened");
+    document.querySelector(".header ul").classList.remove("open");
   };
 }
 
