@@ -95,3 +95,10 @@ document.addEventListener("click", (e) => {
 });
 
 // End Gallery
+
+// menu toggle-button
+document.querySelector(".header .menu").onclick = function () {
+  let ul = document.querySelector(".header ul");
+  ul.classList.toggle("open");
+  document.querySelector(".settings").classList.remove("opened");
+};
