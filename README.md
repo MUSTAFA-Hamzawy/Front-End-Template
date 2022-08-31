@@ -1,7 +1,7 @@
 # Demo:
 
 ## 1:
-https://mustafa-hamzawy.github.io/Front-End-Template/
+https://mustafa-hamzawy.github.io/Front-End-Templates/
 
 ## 2:
 https://mustafa-hamzawy.github.io/HTML_CSS/
